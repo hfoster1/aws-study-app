@@ -273,7 +273,7 @@ const DomainBar = () => {
         {domains.map((d) => (
           <div key={d.name} style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
             <div style={{ width: 7, height: 7, borderRadius: 2, background: d.color }} />
-            <span style={{ color: "#94A3B8", fontSize: "0.65rem", fontFamily: "'DM Mono', monospace" }}>
+            <span style={{ color: "#9da7b3", fontSize: "0.65rem", fontFamily: "'DM Mono', monospace" }}>
               {d.name} {d.weight}%
             </span>
           </div>
@@ -288,8 +288,8 @@ const ConceptCard = ({ concept, index, accent }) => {
   return (
     <div
       style={{
-        background: "#1E293B",
-        border: `1px solid ${open ? accent + "44" : "#334155"}`,
+        background: "#1c2128",
+        border: `1px solid ${open ? accent + "44" : "#30363d"}`,
         borderRadius: 10,
         overflow: "hidden",
         transition: "border-color 0.2s"
@@ -321,12 +321,12 @@ const ConceptCard = ({ concept, index, accent }) => {
         >
           {String(index + 1).padStart(2, "0")}
         </span>
-        <span style={{ color: "#E2E8F0", fontSize: "0.85rem", fontWeight: 500, flex: 1, lineHeight: 1.4 }}>
+        <span style={{ color: "#e6edf3", fontSize: "0.85rem", fontWeight: 500, flex: 1, lineHeight: 1.4 }}>
           {concept.title}
         </span>
         <span
           style={{
-            color: "#475569",
+            color: "#6e7681",
             fontSize: "0.9rem",
             transform: open ? "rotate(90deg)" : "rotate(0)",
             transition: "transform 0.2s",
@@ -338,12 +338,12 @@ const ConceptCard = ({ concept, index, accent }) => {
       </button>
       {open && (
         <div style={{ padding: "0 1rem 1rem 2.75rem" }}>
-          <p style={{ color: "#CBD5E1", fontSize: "0.82rem", lineHeight: 1.7, margin: "0 0 0.75rem 0" }}>
+          <p style={{ color: "#c9d1d9", fontSize: "0.82rem", lineHeight: 1.7, margin: "0 0 0.75rem 0" }}>
             {concept.detail}
           </p>
           <div
             style={{
-              background: "#0F172A",
+              background: "#0e1116",
               borderLeft: `2px solid ${accent}`,
               borderRadius: "0 6px 6px 0",
               padding: "0.55rem 0.8rem"
@@ -360,7 +360,7 @@ const ConceptCard = ({ concept, index, accent }) => {
             >
               Exam Intel
             </span>
-            <p style={{ color: "#94A3B8", fontSize: "0.78rem", lineHeight: 1.6, margin: "0.25rem 0 0 0" }}>
+            <p style={{ color: "#9da7b3", fontSize: "0.78rem", lineHeight: 1.6, margin: "0.25rem 0 0 0" }}>
               {concept.exam}
             </p>
           </div>
@@ -376,8 +376,8 @@ const LabCard = ({ lab }) => {
   return (
     <div
       style={{
-        background: "#0F172A",
-        border: `1px solid ${open ? "#10B98133" : "#334155"}`,
+        background: "#0e1116",
+        border: `1px solid ${open ? "#10B98133" : "#30363d"}`,
         borderRadius: 10,
         overflow: "hidden",
         transition: "border-color 0.2s"
@@ -399,17 +399,17 @@ const LabCard = ({ lab }) => {
       >
         <span style={{ fontSize: "1rem", flexShrink: 0 }}>🧪</span>
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ color: "#E2E8F0", fontSize: "0.85rem", fontWeight: 500, lineHeight: 1.3 }}>{lab.title}</div>
+          <div style={{ color: "#e6edf3", fontSize: "0.85rem", fontWeight: 500, lineHeight: 1.3 }}>{lab.title}</div>
           <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.25rem" }}>
-            <span style={{ color: diffColors[lab.difficulty] || "#94A3B8", fontSize: "0.6rem", fontFamily: "'DM Mono', monospace" }}>
+            <span style={{ color: diffColors[lab.difficulty] || "#9da7b3", fontSize: "0.6rem", fontFamily: "'DM Mono', monospace" }}>
               {lab.difficulty}
             </span>
-            <span style={{ color: "#475569", fontSize: "0.6rem", fontFamily: "'DM Mono', monospace" }}>~{lab.time}</span>
+            <span style={{ color: "#6e7681", fontSize: "0.6rem", fontFamily: "'DM Mono', monospace" }}>~{lab.time}</span>
           </div>
         </div>
         <span
           style={{
-            color: "#475569",
+            color: "#6e7681",
             fontSize: "0.9rem",
             transform: open ? "rotate(90deg)" : "rotate(0)",
             transition: "transform 0.2s",
@@ -438,14 +438,14 @@ const LabCard = ({ lab }) => {
                 >
                   {i + 1}
                 </span>
-                <span style={{ color: "#CBD5E1", fontSize: "0.8rem", lineHeight: 1.55 }}>{step}</span>
+                <span style={{ color: "#c9d1d9", fontSize: "0.8rem", lineHeight: 1.55 }}>{step}</span>
               </div>
             ))}
           </div>
-          <div style={{ background: "#1E293B", borderRadius: 8, padding: "0.55rem 0.8rem", display: "flex", gap: "0.4rem", alignItems: "flex-start" }}>
+          <div style={{ background: "#1c2128", borderRadius: 8, padding: "0.55rem 0.8rem", display: "flex", gap: "0.4rem", alignItems: "flex-start" }}>
             <span style={{ color: "#10B981", fontSize: "0.75rem", flexShrink: 0 }}>↳</span>
-            <span style={{ color: "#94A3B8", fontSize: "0.75rem", lineHeight: 1.5 }}>
-              <strong style={{ color: "#CBD5E1" }}>Reinforces:</strong> {lab.reinforces}
+            <span style={{ color: "#9da7b3", fontSize: "0.75rem", lineHeight: 1.5 }}>
+              <strong style={{ color: "#c9d1d9" }}>Reinforces:</strong> {lab.reinforces}
             </span>
           </div>
         </div>
@@ -456,12 +456,12 @@ const LabCard = ({ lab }) => {
 
 const WeekDetailed = ({ week }) => (
   <div>
-    <p style={{ color: "#94A3B8", fontSize: "0.88rem", lineHeight: 1.7, marginBottom: "1.75rem" }}>
+    <p style={{ color: "#9da7b3", fontSize: "0.88rem", lineHeight: 1.7, marginBottom: "1.75rem" }}>
       {week.overview}
     </p>
 
     <div style={{ marginBottom: "2rem" }}>
-      <div style={{ fontSize: "0.6rem", fontFamily: "'DM Mono', monospace", letterSpacing: "0.12em", color: "#64748B", textTransform: "uppercase", marginBottom: "0.75rem" }}>
+      <div style={{ fontSize: "0.6rem", fontFamily: "'DM Mono', monospace", letterSpacing: "0.12em", color: "#6e7681", textTransform: "uppercase", marginBottom: "0.75rem" }}>
         Concepts to Master
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
@@ -472,7 +472,7 @@ const WeekDetailed = ({ week }) => (
     </div>
 
     <div style={{ marginBottom: "2rem" }}>
-      <div style={{ fontSize: "0.6rem", fontFamily: "'DM Mono', monospace", letterSpacing: "0.12em", color: "#64748B", textTransform: "uppercase", marginBottom: "0.75rem" }}>
+      <div style={{ fontSize: "0.6rem", fontFamily: "'DM Mono', monospace", letterSpacing: "0.12em", color: "#6e7681", textTransform: "uppercase", marginBottom: "0.75rem" }}>
         Hands-On Labs
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
@@ -483,14 +483,14 @@ const WeekDetailed = ({ week }) => (
     </div>
 
     <div>
-      <div style={{ fontSize: "0.6rem", fontFamily: "'DM Mono', monospace", letterSpacing: "0.12em", color: "#64748B", textTransform: "uppercase", marginBottom: "0.6rem" }}>
+      <div style={{ fontSize: "0.6rem", fontFamily: "'DM Mono', monospace", letterSpacing: "0.12em", color: "#6e7681", textTransform: "uppercase", marginBottom: "0.6rem" }}>
         End-of-Week Checkpoint
       </div>
-      <div style={{ background: "#1E293B", border: "1px solid #334155", borderRadius: 10, padding: "1rem" }}>
+      <div style={{ background: "#1c2128", border: "1px solid #334155", borderRadius: 10, padding: "1rem" }}>
         {week.checkpoint.map((c, i) => (
           <div key={i} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start", marginBottom: i < week.checkpoint.length - 1 ? "0.6rem" : 0 }}>
             <span style={{ color: "#F97316", flexShrink: 0, fontSize: "0.8rem" }}>◇</span>
-            <span style={{ color: "#CBD5E1", fontSize: "0.82rem", lineHeight: 1.55 }}>{c}</span>
+            <span style={{ color: "#c9d1d9", fontSize: "0.82rem", lineHeight: 1.55 }}>{c}</span>
           </div>
         ))}
       </div>
@@ -500,27 +500,27 @@ const WeekDetailed = ({ week }) => (
 
 const WeekSummary = ({ week }) => (
   <div>
-    <p style={{ color: "#94A3B8", fontSize: "0.88rem", lineHeight: 1.7, marginBottom: "1.25rem" }}>
+    <p style={{ color: "#9da7b3", fontSize: "0.88rem", lineHeight: 1.7, marginBottom: "1.25rem" }}>
       {week.overview}
     </p>
     <div style={{ marginBottom: "1.25rem" }}>
-      <div style={{ fontSize: "0.6rem", fontFamily: "'DM Mono', monospace", letterSpacing: "0.12em", color: "#64748B", textTransform: "uppercase", marginBottom: "0.6rem" }}>
+      <div style={{ fontSize: "0.6rem", fontFamily: "'DM Mono', monospace", letterSpacing: "0.12em", color: "#6e7681", textTransform: "uppercase", marginBottom: "0.6rem" }}>
         Topics
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "0.35rem" }}>
         {week.topics.map((t, i) => (
           <div key={i} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
             <span style={{ color: week.accent, fontSize: "0.4rem", flexShrink: 0, marginTop: "0.35rem" }}>●</span>
-            <span style={{ color: "#CBD5E1", fontSize: "0.8rem", lineHeight: 1.55 }}>{t}</span>
+            <span style={{ color: "#c9d1d9", fontSize: "0.8rem", lineHeight: 1.55 }}>{t}</span>
           </div>
         ))}
       </div>
     </div>
-    <div style={{ background: "#0F172A", border: "1px dashed #334155", borderRadius: 10, padding: "0.85rem 1rem" }}>
-      <div style={{ fontSize: "0.55rem", fontFamily: "'DM Mono', monospace", letterSpacing: "0.1em", color: "#475569", textTransform: "uppercase", marginBottom: "0.35rem" }}>
+    <div style={{ background: "#0e1116", border: "1px dashed #334155", borderRadius: 10, padding: "0.85rem 1rem" }}>
+      <div style={{ fontSize: "0.55rem", fontFamily: "'DM Mono', monospace", letterSpacing: "0.1em", color: "#6e7681", textTransform: "uppercase", marginBottom: "0.35rem" }}>
         Lab Preview
       </div>
-      <p style={{ color: "#94A3B8", fontSize: "0.8rem", lineHeight: 1.5, margin: 0 }}>{week.labPreview}</p>
+      <p style={{ color: "#9da7b3", fontSize: "0.8rem", lineHeight: 1.5, margin: 0 }}>{week.labPreview}</p>
     </div>
   </div>
 );
@@ -558,26 +558,26 @@ export default function SaaCourse() {
     <div
       style={{
         minHeight: "100vh",
-        background: "#0B1120",
-        fontFamily: "'Newsreader', Georgia, serif",
-        color: "#E2E8F0"
+        background: "#0e1116",
+        fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif",
+        color: "#e6edf3"
       }}
     >
       <link
-        href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600;6..72,700&family=DM+Mono:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap"
         rel="stylesheet"
       />
 
       {/* Header */}
       <div style={{ borderBottom: "1px solid #1E293B", padding: isMobile ? "1.25rem 1rem 1rem" : "2rem 2rem 1.75rem" }}>
         <div style={{ maxWidth: 960, margin: "0 auto" }}>
-          <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", letterSpacing: "0.2em", color: "#F97316", textTransform: "uppercase", marginBottom: "0.5rem" }}>
+          <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", letterSpacing: "0.2em", color: "#58a6ff", textTransform: "uppercase", marginBottom: "0.5rem" }}>
             AWS Solutions Architect — Associate · SAA-C03
           </div>
-          <h1 style={{ fontSize: isMobile ? "1.5rem" : "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 600, color: "#F8FAFC", lineHeight: 1.15, margin: "0 0 0.4rem 0", letterSpacing: "-0.02em" }}>
+          <h1 style={{ fontSize: isMobile ? "1.5rem" : "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 600, color: "#e6edf3", lineHeight: 1.15, margin: "0 0 0.4rem 0", letterSpacing: "-0.02em" }}>
             8-Week Learning Course
           </h1>
-          <p style={{ color: "#64748B", fontSize: "0.82rem", lineHeight: 1.5, margin: "0 0 1.25rem 0", maxWidth: 600 }}>
+          <p style={{ color: "#6e7681", fontSize: "0.82rem", lineHeight: 1.5, margin: "0 0 1.25rem 0", maxWidth: 600 }}>
             Exam prep + hands-on console labs. Each week builds real architecture skills.
           </p>
           <DomainBar />
@@ -586,7 +586,7 @@ export default function SaaCourse() {
 
       {/* Mobile: week selector */}
       {isMobile && (
-        <div style={{ borderBottom: "1px solid #1E293B", background: "#0F172A", position: "sticky", top: 0, zIndex: 20 }}>
+        <div style={{ borderBottom: "1px solid #1E293B", background: "#0e1116", position: "sticky", top: 0, zIndex: 20 }}>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             style={{
@@ -604,9 +604,9 @@ export default function SaaCourse() {
               <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.65rem", color: w.accent, background: w.accent + "18", border: `1px solid ${w.accent}33`, borderRadius: 5, padding: "0.15rem 0.45rem" }}>
                 W{w.week}
               </span>
-              <span style={{ color: "#E2E8F0", fontSize: "0.85rem", fontWeight: 500 }}>{w.title}</span>
+              <span style={{ color: "#e6edf3", fontSize: "0.85rem", fontWeight: 500 }}>{w.title}</span>
             </div>
-            <span style={{ color: "#475569", fontSize: "0.85rem", transform: menuOpen ? "rotate(180deg)" : "rotate(0)", transition: "transform 0.2s" }}>▾</span>
+            <span style={{ color: "#6e7681", fontSize: "0.85rem", transform: menuOpen ? "rotate(180deg)" : "rotate(0)", transition: "transform 0.2s" }}>▾</span>
           </button>
           {menuOpen && (
             <div style={{ borderTop: "1px solid #1E293B", maxHeight: "60vh", overflowY: "auto" }}>
@@ -616,7 +616,7 @@ export default function SaaCourse() {
                   onClick={() => selectWeek(i)}
                   style={{
                     width: "100%",
-                    background: i === activeWeek ? "#1E293B" : "transparent",
+                    background: i === activeWeek ? "#1c2128" : "transparent",
                     border: "none",
                     borderLeft: i === activeWeek ? `3px solid ${wk.accent}` : "3px solid transparent",
                     padding: "0.7rem 1rem",
@@ -627,10 +627,10 @@ export default function SaaCourse() {
                     textAlign: "left"
                   }}
                 >
-                  <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", color: i === activeWeek ? wk.accent : "#475569", width: 16, flexShrink: 0 }}>
+                  <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.6rem", color: i === activeWeek ? wk.accent : "#6e7681", width: 16, flexShrink: 0 }}>
                     {i + 1}
                   </span>
-                  <span style={{ color: i === activeWeek ? "#E2E8F0" : "#94A3B8", fontSize: "0.8rem", lineHeight: 1.3 }}>
+                  <span style={{ color: i === activeWeek ? "#e6edf3" : "#9da7b3", fontSize: "0.8rem", lineHeight: 1.3 }}>
                     {wk.title}
                   </span>
                 </button>
@@ -656,7 +656,7 @@ export default function SaaCourse() {
               overflowY: "auto"
             }}
           >
-            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.55rem", letterSpacing: "0.12em", color: "#475569", textTransform: "uppercase", padding: "0 1rem", marginBottom: "0.6rem" }}>
+            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.55rem", letterSpacing: "0.12em", color: "#6e7681", textTransform: "uppercase", padding: "0 1rem", marginBottom: "0.6rem" }}>
               Course Map
             </div>
             {WEEKS.map((wk, i) => (
@@ -668,7 +668,7 @@ export default function SaaCourse() {
                   gap: "0.5rem",
                   alignItems: "flex-start",
                   width: "100%",
-                  background: i === activeWeek ? "#1E293B" : "transparent",
+                  background: i === activeWeek ? "#1c2128" : "transparent",
                   border: "none",
                   borderLeft: i === activeWeek ? `2px solid ${wk.accent}` : "2px solid transparent",
                   padding: "0.55rem 1rem",
@@ -677,19 +677,19 @@ export default function SaaCourse() {
                   transition: "all 0.15s"
                 }}
               >
-                <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.55rem", color: i === activeWeek ? wk.accent : "#475569", flexShrink: 0, marginTop: "0.1rem", width: 12 }}>
+                <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.55rem", color: i === activeWeek ? wk.accent : "#6e7681", flexShrink: 0, marginTop: "0.1rem", width: 12 }}>
                   {i + 1}
                 </span>
-                <span style={{ color: i === activeWeek ? "#E2E8F0" : "#94A3B8", fontSize: "0.75rem", lineHeight: 1.35, fontWeight: i === activeWeek ? 500 : 400 }}>
+                <span style={{ color: i === activeWeek ? "#e6edf3" : "#9da7b3", fontSize: "0.75rem", lineHeight: 1.35, fontWeight: i === activeWeek ? 500 : 400 }}>
                   {wk.title}
                 </span>
               </button>
             ))}
-            <div style={{ margin: "1.25rem 1rem 0", padding: "0.75rem", background: "#1E293B", borderRadius: 8, border: "1px solid #334155" }}>
-              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.5rem", letterSpacing: "0.1em", color: "#475569", textTransform: "uppercase", marginBottom: "0.4rem" }}>
+            <div style={{ margin: "1.25rem 1rem 0", padding: "0.75rem", background: "#1c2128", borderRadius: 8, border: "1px solid #334155" }}>
+              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.5rem", letterSpacing: "0.1em", color: "#6e7681", textTransform: "uppercase", marginBottom: "0.4rem" }}>
                 Your Edge
               </div>
-              <div style={{ color: "#CBD5E1", fontSize: "0.68rem", lineHeight: 1.5 }}>
+              <div style={{ color: "#c9d1d9", fontSize: "0.68rem", lineHeight: 1.5 }}>
                 CCP passed ✓<br />
                 50% exam voucher<br />
                 Custom exam tool
@@ -708,12 +708,12 @@ export default function SaaCourse() {
                   WEEK {w.week}
                 </span>
               )}
-              <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.55rem", color: "#475569" }}>
+              <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.55rem", color: "#6e7681" }}>
                 {w.domain} · {w.domainWeight}
               </span>
             </div>
             {!isMobile && (
-              <h2 style={{ fontSize: "clamp(1.25rem, 3vw, 1.7rem)", fontWeight: 600, color: "#F8FAFC", margin: 0, lineHeight: 1.2, letterSpacing: "-0.01em" }}>
+              <h2 style={{ fontSize: "clamp(1.25rem, 3vw, 1.7rem)", fontWeight: 600, color: "#e6edf3", margin: 0, lineHeight: 1.2, letterSpacing: "-0.01em" }}>
                 {w.title}
               </h2>
             )}
@@ -726,7 +726,7 @@ export default function SaaCourse() {
             {activeWeek > 0 ? (
               <button
                 onClick={() => selectWeek(activeWeek - 1)}
-                style={{ background: "none", border: "1px solid #334155", borderRadius: 8, padding: "0.55rem 1rem", color: "#94A3B8", cursor: "pointer", fontFamily: "'DM Mono', monospace", fontSize: "0.72rem" }}
+                style={{ background: "none", border: "1px solid #334155", borderRadius: 8, padding: "0.55rem 1rem", color: "#9da7b3", cursor: "pointer", fontFamily: "'DM Mono', monospace", fontSize: "0.72rem" }}
               >
                 ← Week {activeWeek}
               </button>
